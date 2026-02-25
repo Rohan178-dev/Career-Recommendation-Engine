@@ -10,10 +10,19 @@ const app = express();
 const PORT = 4000;
 
 // ─── Middleware ────────────────────────────────────────────────────────────
-// CORS allows the CRA dev server on port 3000 to call this API.
-// express.json() parses incoming request bodies as JSON.
-app.use(cors());
+// Allow requests from Vercel deployments and local dev.
+// The regex covers all *.vercel.app preview URLs automatically.
+app.use(
+    cors({
+        origin: [
+            /\.vercel\.app$/,          // all Vercel preview & production URLs
+            "http://localhost:3000",   // local CRA dev server
+        ],
+        methods: ["GET", "POST"],
+    })
+);
 app.use(express.json());
+
 
 // ─── POST /api/recommend ──────────────────────────────────────────────────
 // Accepts a user profile and returns up to 5 matched career objects.
