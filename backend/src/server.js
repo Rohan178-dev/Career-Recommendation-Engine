@@ -10,17 +10,9 @@ const app = express();
 const PORT = 4000;
 
 // ─── Middleware ────────────────────────────────────────────────────────────
-// Allow requests from Vercel deployments and local dev.
-// The regex covers all *.vercel.app preview URLs automatically.
-app.use(
-    cors({
-        origin: [
-            /\.vercel\.app$/,          // all Vercel preview & production URLs
-            "http://localhost:3000",   // local CRA dev server
-        ],
-        methods: ["GET", "POST"],
-    })
-);
+// Open CORS — allows the Vercel frontend and any other domain to call this API.
+// express.json() parses incoming request bodies as JSON.
+app.use(cors());
 app.use(express.json());
 
 
