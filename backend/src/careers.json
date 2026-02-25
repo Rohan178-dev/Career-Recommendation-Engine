@@ -1,0 +1,420 @@
+[
+    {
+        "id": 1,
+        "title": "Software Engineer",
+        "description": "Software engineers design, build, and maintain the systems and applications that power modern technology. They solve complex problems through code and collaborate across teams to ship impactful products. This is one of the most versatile and high-demand careers of the 21st century.",
+        "education": "bachelor",
+        "interests": [
+            "technology",
+            "problem-solving",
+            "innovation"
+        ],
+        "skills": [
+            "programming",
+            "logic",
+            "mathematics"
+        ],
+        "industry": "it",
+        "growthOutlook": "Strong — 25% projected growth by 2030",
+        "salaryRange": "₹6L – ₹35L per year"
+    },
+    {
+        "id": 2,
+        "title": "Data Scientist",
+        "description": "Data scientists extract meaningful insights from large datasets using statistical methods, machine learning, and visualisation tools. They inform strategic decisions across business, healthcare, finance, and beyond. A strong analytical mindset is the foundation of this role.",
+        "education": "master",
+        "interests": [
+            "technology",
+            "research",
+            "problem-solving"
+        ],
+        "skills": [
+            "programming",
+            "mathematics",
+            "analytical-thinking"
+        ],
+        "industry": "it",
+        "growthOutlook": "Very Strong — 35% projected growth by 2030",
+        "salaryRange": "₹8L – ₹40L per year"
+    },
+    {
+        "id": 3,
+        "title": "UX Designer",
+        "description": "UX designers craft intuitive and delightful digital experiences by deeply understanding user needs, conducting research, and iterating on designs. They bridge the gap between technology and human behaviour. Great UX transforms complex systems into effortless interactions.",
+        "education": "bachelor",
+        "interests": [
+            "design",
+            "technology",
+            "research"
+        ],
+        "skills": [
+            "creativity",
+            "analytical-thinking",
+            "communication"
+        ],
+        "industry": "it",
+        "growthOutlook": "Moderate — 13% projected growth by 2030",
+        "salaryRange": "₹5L – ₹28L per year"
+    },
+    {
+        "id": 4,
+        "title": "Machine Learning Engineer",
+        "description": "Machine learning engineers build and deploy scalable ML models and pipelines that power intelligent systems. They sit at the intersection of software engineering and data science, turning research prototypes into production-grade solutions.",
+        "education": "master",
+        "interests": [
+            "technology",
+            "research",
+            "innovation"
+        ],
+        "skills": [
+            "programming",
+            "mathematics",
+            "logic"
+        ],
+        "industry": "it",
+        "growthOutlook": "Very Strong — 40% projected growth by 2030",
+        "salaryRange": "₹10L – ₹50L per year"
+    },
+    {
+        "id": 5,
+        "title": "Cybersecurity Analyst",
+        "description": "Cybersecurity analysts protect organisations from digital threats by monitoring networks, identifying vulnerabilities, and responding to incidents. They are the guardians of data integrity and privacy in an increasingly connected world.",
+        "education": "bachelor",
+        "interests": [
+            "technology",
+            "problem-solving",
+            "innovation"
+        ],
+        "skills": [
+            "analytical-thinking",
+            "logic",
+            "programming"
+        ],
+        "industry": "it",
+        "growthOutlook": "Very Strong — 33% projected growth by 2030",
+        "salaryRange": "₹5L – ₹30L per year"
+    },
+    {
+        "id": 6,
+        "title": "Biomedical Researcher",
+        "description": "Biomedical researchers investigate biological processes and diseases to develop treatments and improve human health. Their work in laboratories and clinical settings drives medical breakthroughs that save millions of lives. A passion for science and rigorous methodology are essential.",
+        "education": "doctorate",
+        "interests": [
+            "science",
+            "research",
+            "healthcare"
+        ],
+        "skills": [
+            "analytical-thinking",
+            "laboratory-skills",
+            "writing"
+        ],
+        "industry": "healthcare",
+        "growthOutlook": "Strong — 17% projected growth by 2030",
+        "salaryRange": "₹5L – ₹25L per year"
+    },
+    {
+        "id": 7,
+        "title": "Clinical Psychologist",
+        "description": "Clinical psychologists assess and treat mental, emotional, and behavioural disorders across diverse populations. They conduct therapy, administer psychological tests, and develop evidence-based treatment plans. Empathy and scientific rigour are equally vital in this deeply human profession.",
+        "education": "doctorate",
+        "interests": [
+            "healthcare",
+            "research",
+            "education"
+        ],
+        "skills": [
+            "empathy",
+            "communication",
+            "analytical-thinking"
+        ],
+        "industry": "healthcare",
+        "growthOutlook": "Strong — 19% projected growth by 2030",
+        "salaryRange": "₹4L – ₹20L per year"
+    },
+    {
+        "id": 8,
+        "title": "Nurse Practitioner",
+        "description": "Nurse practitioners are advanced practice registered nurses who diagnose conditions, prescribe treatments, and provide primary and specialised care. They play a critical role in expanding access to quality healthcare, especially in underserved communities.",
+        "education": "master",
+        "interests": [
+            "healthcare",
+            "science",
+            "leadership"
+        ],
+        "skills": [
+            "empathy",
+            "communication",
+            "leadership"
+        ],
+        "industry": "healthcare",
+        "growthOutlook": "Very Strong — 40% projected growth by 2030",
+        "salaryRange": "₹4L – ₹18L per year"
+    },
+    {
+        "id": 9,
+        "title": "Public Health Officer",
+        "description": "Public health officers design and implement programmes that improve community health outcomes at scale. They analyse epidemiological data, coordinate policy initiatives, and manage health campaigns across populations.",
+        "education": "master",
+        "interests": [
+            "healthcare",
+            "research",
+            "environment"
+        ],
+        "skills": [
+            "analytical-thinking",
+            "communication",
+            "leadership"
+        ],
+        "industry": "government",
+        "growthOutlook": "Moderate — 10% projected growth by 2030",
+        "salaryRange": "₹5L – ₹18L per year"
+    },
+    {
+        "id": 10,
+        "title": "Financial Analyst",
+        "description": "Financial analysts evaluate investment opportunities, assess risk, and guide organisations in making data-driven financial decisions. They build financial models, interpret market trends, and produce actionable reports for stakeholders.",
+        "education": "bachelor",
+        "interests": [
+            "finance",
+            "business",
+            "research"
+        ],
+        "skills": [
+            "analytical-thinking",
+            "mathematics",
+            "writing"
+        ],
+        "industry": "finance",
+        "growthOutlook": "Moderate — 9% projected growth by 2030",
+        "salaryRange": "₹5L – ₹25L per year"
+    },
+    {
+        "id": 11,
+        "title": "Investment Banker",
+        "description": "Investment bankers facilitate major financial transactions including mergers, acquisitions, and capital raises for corporations and governments. They operate at the intersection of finance, strategy, and negotiation in high-pressure, high-reward environments.",
+        "education": "master",
+        "interests": [
+            "finance",
+            "business",
+            "leadership"
+        ],
+        "skills": [
+            "analytical-thinking",
+            "communication",
+            "mathematics"
+        ],
+        "industry": "finance",
+        "growthOutlook": "Moderate — 8% projected growth by 2030",
+        "salaryRange": "₹10L – ₹60L per year"
+    },
+    {
+        "id": 12,
+        "title": "Economist",
+        "description": "Economists study the production, distribution, and consumption of goods and services. They advise governments and businesses on economic policy, interpret data, and build predictive models to understand market behaviour.",
+        "education": "master",
+        "interests": [
+            "finance",
+            "research",
+            "business"
+        ],
+        "skills": [
+            "mathematics",
+            "analytical-thinking",
+            "writing"
+        ],
+        "industry": "finance",
+        "growthOutlook": "Moderate — 6% projected growth by 2030",
+        "salaryRange": "₹6L – ₹22L per year"
+    },
+    {
+        "id": 13,
+        "title": "Civil Engineer",
+        "description": "Civil engineers plan, design, and oversee the construction of infrastructure — roads, bridges, dams, and buildings — that forms the backbone of modern civilisation. They balance technical precision with project management and public safety considerations.",
+        "education": "bachelor",
+        "interests": [
+            "engineering",
+            "problem-solving",
+            "environment"
+        ],
+        "skills": [
+            "mathematics",
+            "analytical-thinking",
+            "project-management"
+        ],
+        "industry": "engineering",
+        "growthOutlook": "Moderate — 8% projected growth by 2030",
+        "salaryRange": "₹4L – ₹22L per year"
+    },
+    {
+        "id": 14,
+        "title": "Mechanical Engineer",
+        "description": "Mechanical engineers design and develop machinery, engines, and mechanical systems across industries from automotive to aerospace. They apply principles of physics and material science to create solutions that power the physical world.",
+        "education": "bachelor",
+        "interests": [
+            "engineering",
+            "innovation",
+            "problem-solving"
+        ],
+        "skills": [
+            "mathematics",
+            "logic",
+            "analytical-thinking"
+        ],
+        "industry": "engineering",
+        "growthOutlook": "Moderate — 7% projected growth by 2030",
+        "salaryRange": "₹4L – ₹20L per year"
+    },
+    {
+        "id": 15,
+        "title": "Environmental Scientist",
+        "description": "Environmental scientists study the natural world and the impact of human activity on ecosystems. They develop strategies to mitigate pollution, conserve biodiversity, and advise policy makers on sustainable practices.",
+        "education": "master",
+        "interests": [
+            "environment",
+            "science",
+            "research"
+        ],
+        "skills": [
+            "analytical-thinking",
+            "laboratory-skills",
+            "writing"
+        ],
+        "industry": "environment",
+        "growthOutlook": "Strong — 15% projected growth by 2030",
+        "salaryRange": "₹4L – ₹18L per year"
+    },
+    {
+        "id": 16,
+        "title": "Urban Planner",
+        "description": "Urban planners design land use policies and development strategies that shape how cities grow, function, and serve their residents. They balance economic development, environmental sustainability, and community wellbeing in their work.",
+        "education": "master",
+        "interests": [
+            "environment",
+            "leadership",
+            "research"
+        ],
+        "skills": [
+            "analytical-thinking",
+            "communication",
+            "project-management"
+        ],
+        "industry": "environment",
+        "growthOutlook": "Moderate — 11% projected growth by 2030",
+        "salaryRange": "₹4L – ₹16L per year"
+    },
+    {
+        "id": 17,
+        "title": "Secondary School Teacher",
+        "description": "Secondary school teachers educate students across subjects during formative adolescent years, developing critical thinking, creativity, and foundational knowledge. Effective teachers inspire intellectual curiosity that shapes lifelong learners.",
+        "education": "bachelor",
+        "interests": [
+            "education",
+            "communication",
+            "leadership"
+        ],
+        "skills": [
+            "communication",
+            "leadership",
+            "writing"
+        ],
+        "industry": "education",
+        "growthOutlook": "Stable — 5% projected growth by 2030",
+        "salaryRange": "₹3L – ₹12L per year"
+    },
+    {
+        "id": 18,
+        "title": "Instructional Designer",
+        "description": "Instructional designers create structured learning experiences for corporate training, e-learning platforms, and educational institutions. They apply learning science principles to make knowledge accessible, engaging, and measurable.",
+        "education": "master",
+        "interests": [
+            "education",
+            "design",
+            "technology"
+        ],
+        "skills": [
+            "creativity",
+            "communication",
+            "writing"
+        ],
+        "industry": "education",
+        "growthOutlook": "Moderate — 10% projected growth by 2030",
+        "salaryRange": "₹4L – ₹18L per year"
+    },
+    {
+        "id": 19,
+        "title": "Content Strategist",
+        "description": "Content strategists plan, develop, and manage content that serves both audience needs and business goals. They combine editorial judgement with data analysis to craft narratives that build brand authority and drive engagement.",
+        "education": "bachelor",
+        "interests": [
+            "writing",
+            "communication",
+            "business"
+        ],
+        "skills": [
+            "writing",
+            "analytical-thinking",
+            "creativity"
+        ],
+        "industry": "media",
+        "growthOutlook": "Moderate — 10% projected growth by 2030",
+        "salaryRange": "₹4L – ₹20L per year"
+    },
+    {
+        "id": 20,
+        "title": "Journalist",
+        "description": "Journalists investigate, report, and communicate stories that inform the public and hold power to account. They work across print, broadcast, and digital media, combining sharp research skills with compelling narrative craft.",
+        "education": "bachelor",
+        "interests": [
+            "writing",
+            "communication",
+            "research"
+        ],
+        "skills": [
+            "writing",
+            "communication",
+            "analytical-thinking"
+        ],
+        "industry": "media",
+        "growthOutlook": "Challenging — evolving landscape, 3% growth by 2030",
+        "salaryRange": "₹3L – ₹15L per year"
+    },
+    {
+        "id": 21,
+        "title": "Graphic Designer",
+        "description": "Graphic designers communicate ideas visually through typography, imagery, colour, and layout. They work across branding, advertising, editorial, and digital product design to produce work that is both aesthetically compelling and strategically purposeful.",
+        "education": "bachelor",
+        "interests": [
+            "design",
+            "creativity",
+            "innovation"
+        ],
+        "skills": [
+            "creativity",
+            "communication",
+            "writing"
+        ],
+        "industry": "media",
+        "growthOutlook": "Moderate — 3% projected growth by 2030",
+        "salaryRange": "₹3L – ₹18L per year"
+    },
+    {
+        "id": 22,
+        "title": "Product Manager",
+        "description": "Product managers define the vision, strategy, and roadmap for software products, working cross-functionally with engineers, designers, and business stakeholders. They are the bridge between user needs and technical execution, prioritising relentlessly in service of impact.",
+        "education": "bachelor",
+        "interests": [
+            "technology",
+            "business",
+            "leadership"
+        ],
+        "skills": [
+            "communication",
+            "leadership",
+            "project-management"
+        ],
+        "industry": "it",
+        "growthOutlook": "Strong — 19% projected growth by 2030",
+        "salaryRange": "₹8L – ₹45L per year"
+    }
+]

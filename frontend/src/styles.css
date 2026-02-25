@@ -1,0 +1,763 @@
+/* ═══════════════════════════════════════════════════════════════════════════
+   styles.css — Career Compass
+   Dark editorial aesthetic. Premium, cinematic, zero CSS frameworks.
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/* ── Design tokens ─────────────────────────────────────────────────────── */
+:root {
+  --color-bg: #080808;
+  --color-surface: #111111;
+  --color-surface-hover: #161616;
+  --color-border: rgba(255, 255, 255, 0.08);
+  --color-border-active: rgba(255, 255, 255, 0.2);
+  --color-text-primary: #f0ede8;
+  --color-text-secondary: #a8a89e;
+  /* lightened for readability */
+  --color-text-muted: #6e6e68;
+  /* lightened from #444440 — was invisible */
+  --color-accent: #c8f564;
+  --color-accent-dim: rgba(200, 245, 100, 0.12);
+  --color-accent-glow: rgba(200, 245, 100, 0.25);
+  --radius: 4px;
+  --radius-lg: 8px;
+  --font-display: "Playfair Display", Georgia, serif;
+  --font-body: -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+  --font-mono: "SF Mono", "Fira Code", "Courier New", monospace;
+}
+
+/* ── Reset & base ──────────────────────────────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text-primary);
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* ── Fixed site header ─────────────────────────────────────────────────── */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2.5rem;
+  height: 56px;
+  background: rgba(8, 8, 8, 0.8);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* Logo uses italic Playfair to feel editorial, not SaaS */
+.site-logo {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.1rem;
+  color: var(--color-text-primary);
+  letter-spacing: -0.01em;
+}
+
+/* ── Zoom controls in header ───────────────────────────────────────────── */
+.zoom-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.zoom-btn {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  transition: border-color 0.15s ease, color 0.15s ease, background 0.15s ease;
+}
+
+.zoom-btn:hover {
+  border-color: var(--color-border-active);
+  color: var(--color-text-primary);
+  background: var(--color-surface-hover);
+}
+
+.zoom-level {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--color-text-secondary);
+  letter-spacing: 0.06em;
+  min-width: 34px;
+  text-align: center;
+  user-select: none;
+}
+
+/* ── Main content wrapper ──────────────────────────────────────────────── */
+.main-content {
+  position: relative;
+  z-index: 1;
+  /* sit above the fixed canvas */
+}
+
+/* ── Hero section ──────────────────────────────────────────────────────── */
+.hero-section {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 80px 2rem 4rem;
+  overflow: hidden;
+  text-align: center;
+}
+
+/* Slowly rotating decorative ring — pure CSS, no JS */
+.hero-ring {
+  position: absolute;
+  width: 520px;
+  height: 520px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: ring-rotate 28s linear infinite;
+  pointer-events: none;
+}
+
+/* Second inner ring for depth */
+.hero-ring::after {
+  content: "";
+  position: absolute;
+  inset: 60px;
+  border-radius: 50%;
+  border: 1px solid rgba(200, 245, 100, 0.06);
+  animation: ring-rotate 18s linear infinite reverse;
+}
+
+@keyframes ring-rotate {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+.hero-inner {
+  position: relative;
+  z-index: 2;
+  max-width: 680px;
+}
+
+/* Small all-caps label above the headline */
+.hero-eyebrow {
+  display: block;
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+  margin-bottom: 1.5rem;
+}
+
+.hero-headline {
+  font-family: var(--font-display);
+  font-size: 4.5rem;
+  font-weight: 400;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  color: var(--color-text-primary);
+  margin-bottom: 1.5rem;
+}
+
+/* The italic "You Belong." line */
+.hero-headline em {
+  font-style: italic;
+  color: var(--color-text-primary);
+}
+
+.hero-descriptor {
+  font-size: 1rem;
+  color: var(--color-text-secondary);
+  max-width: 420px;
+  margin: 0 auto 2.5rem;
+  line-height: 1.75;
+}
+
+/* "Begin →" is a text link, not a button */
+.hero-cta {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+  color: var(--color-accent);
+  text-transform: uppercase;
+  padding: 0;
+  transition: opacity 0.2s ease, letter-spacing 0.2s ease;
+}
+
+.hero-cta:hover {
+  opacity: 0.75;
+  letter-spacing: 0.14em;
+}
+
+/* ── Section eyebrow (shared) ──────────────────────────────────────────── */
+.section-eyebrow {
+  display: block;
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+  margin-bottom: 1rem;
+}
+
+/* ── Form section ──────────────────────────────────────────────────────── */
+.form-section {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 4rem 2rem 8rem;
+}
+
+.profile-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+/* Each field group sits on a dark surface card */
+.form-field-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  transition: border-color 0.2s ease;
+}
+
+.form-field-card:focus-within {
+  border-color: var(--color-border-active);
+}
+
+/* All-caps small field labels */
+.field-label {
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+}
+
+/* ── Custom select ─────────────────────────────────────────────────────── */
+.select-wrapper {
+  position: relative;
+}
+
+.select-wrapper select {
+  width: 100%;
+  appearance: none;
+  -webkit-appearance: none;
+  background: var(--color-bg);
+  color: var(--color-text-primary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 0.75rem 2.5rem 0.75rem 1rem;
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+  cursor: pointer;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  outline: none;
+}
+
+.select-wrapper select:focus {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px var(--color-accent-dim);
+}
+
+.select-wrapper select option {
+  background: #1a1a1a;
+  color: var(--color-text-primary);
+}
+
+/* Custom chevron icon */
+.select-chevron {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-text-muted);
+  font-size: 1.1rem;
+  pointer-events: none;
+}
+
+.select-error {
+  border-color: rgba(255, 100, 80, 0.5) !important;
+}
+
+/* ── Field error text ──────────────────────────────────────────────────── */
+/* Thin red text only — NO red background fills */
+.field-error {
+  font-size: 0.8125rem;
+  color: rgba(255, 100, 80, 0.85);
+  margin-top: 0.25rem;
+}
+
+/* API-level error above the whole form */
+.api-error {
+  font-size: 0.875rem;
+  color: rgba(255, 100, 80, 0.85);
+  margin-bottom: 1rem;
+  padding: 0.75rem 1rem;
+  border: 1px solid rgba(255, 100, 80, 0.2);
+  border-radius: var(--radius);
+}
+
+/* ── Checkbox pills ────────────────────────────────────────────────────── */
+.checkbox-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.checkbox-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.checkbox-item {
+  background: transparent;
+  border: 1px solid var(--color-border);
+  border-radius: 100px;
+  /* full pill */
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  font-family: var(--font-body);
+  font-size: 0.8125rem;
+  padding: 0.375rem 0.875rem;
+  transition: border-color 0.15s ease, background 0.15s ease, color 0.15s ease;
+  line-height: 1.4;
+}
+
+.checkbox-item:hover {
+  border-color: var(--color-border-active);
+  color: var(--color-text-primary);
+}
+
+/* Selected state: lime border + dim lime bg + lime text */
+.checkbox-item--checked {
+  border-color: var(--color-accent);
+  background: var(--color-accent-dim);
+  color: var(--color-accent);
+}
+
+.checkbox-item--checked:hover {
+  background: rgba(200, 245, 100, 0.18);
+}
+
+/* ── Submit button ─────────────────────────────────────────────────────── */
+.btn-submit {
+  width: 100%;
+  background: var(--color-accent);
+  color: #080808;
+  border: none;
+  border-radius: var(--radius);
+  padding: 1rem 2rem;
+  font-family: var(--font-body);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  transition: filter 0.2s ease, transform 0.2s ease;
+}
+
+.btn-submit:hover:not(:disabled) {
+  filter: brightness(1.1);
+  transform: scale(1.01);
+}
+
+.btn-submit:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* ── Reset / start over link ───────────────────────────────────────────── */
+.btn-reset {
+  background: none;
+  border: none;
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  font-family: var(--font-body);
+  font-size: 0.8125rem;
+  padding: 0;
+  text-align: center;
+  width: 100%;
+  transition: color 0.2s ease;
+}
+
+.btn-reset:hover {
+  color: var(--color-text-primary);
+}
+
+/* ── Loading screen ────────────────────────────────────────────────────── */
+.loading-screen {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  background: rgba(8, 8, 8, 0.92);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.3s ease;
+  backdrop-filter: blur(8px);
+}
+
+.loading-inner {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Pulsing lime dot */
+.loading-dot {
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  flex-shrink: 0;
+  animation: dot-pulse 1.4s ease-in-out infinite;
+}
+
+@keyframes dot-pulse {
+
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.4;
+    transform: scale(0.7);
+  }
+}
+
+.loading-phrase {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--color-text-secondary);
+  transition: opacity 0.3s ease;
+  min-width: 280px;
+}
+
+/* ── Results section ───────────────────────────────────────────────────── */
+.results-section {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 6rem 2rem 6rem;
+  /* Fade + slide up entrance */
+  animation: results-enter 0.5s ease forwards;
+}
+
+@keyframes results-enter {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.results-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 2.5rem;
+  gap: 1rem;
+}
+
+.results-title {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  color: var(--color-text-primary);
+}
+
+.results-count {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--color-text-secondary);
+  letter-spacing: 0.08em;
+  white-space: nowrap;
+  padding-bottom: 0.3rem;
+  /* optical alignment with h2 baseline */
+}
+
+.no-results {
+  color: var(--color-text-secondary);
+  text-align: center;
+  padding: 4rem 0;
+}
+
+/* ── Career cards list ─────────────────────────────────────────────────── */
+.cards-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* ── Individual career card ────────────────────────────────────────────── */
+.career-card {
+  position: relative;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  transition: background 0.2s ease, border-color 0.2s ease;
+  overflow: hidden;
+}
+
+.career-card:hover {
+  background: var(--color-surface-hover);
+  border-color: var(--color-border-active);
+}
+
+/* Lime accent bar on rank #1 card only */
+.career-card--top::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: var(--color-accent);
+  border-radius: var(--radius-lg) 0 0 var(--radius-lg);
+}
+
+/* Zero-padded rank: monospace, top-right */
+.card-rank {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--color-text-secondary);
+  letter-spacing: 0.06em;
+}
+
+.card-title {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  color: var(--color-text-primary);
+  margin-bottom: 0.75rem;
+  /* Leave room for the rank badge */
+  padding-right: 3rem;
+}
+
+.card-description {
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+/* ── Match arc + percentage ────────────────────────────────────────────── */
+.card-match-row {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+/* 52px conic-gradient ring */
+.match-arc {
+  position: relative;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  /* --pct is set inline from the career's matchPercent */
+  background: conic-gradient(var(--color-accent) calc(var(--pct) * 3.6deg),
+      rgba(255, 255, 255, 0.06) 0deg);
+}
+
+/* Inner white circle creates the "donut" ring */
+.match-arc-inner {
+  position: absolute;
+  width: 38px;
+  height: 38px;
+  background: var(--color-surface);
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: background 0.2s ease;
+}
+
+.career-card:hover .match-arc-inner {
+  background: var(--color-surface-hover);
+}
+
+.match-text-group {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+/* Large monospace match number */
+.match-percent {
+  font-family: var(--font-mono);
+  font-size: 1.75rem;
+  color: var(--color-accent);
+  letter-spacing: -0.02em;
+}
+
+.match-label {
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+}
+
+/* ── Meta row: growth & salary ─────────────────────────────────────────── */
+.card-meta-row {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.meta-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.meta-key {
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+}
+
+.meta-value {
+  font-size: 0.8125rem;
+  color: var(--color-text-secondary);
+}
+
+/* ── "Why this fits" section ───────────────────────────────────────────── */
+.card-reason {
+  border-top: 1px solid var(--color-border);
+  padding-top: 1.25rem;
+}
+
+.reason-text {
+  font-size: 0.875rem;
+  font-style: italic;
+  color: var(--color-text-secondary);
+  line-height: 1.75;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   MOBILE — 640px and below
+   ═══════════════════════════════════════════════════════════════════════════ */
+@media (max-width: 640px) {
+
+  /* Header */
+  .site-header {
+    padding: 0 1.25rem;
+  }
+
+  /* Hero */
+  .hero-headline {
+    font-size: 2.25rem;
+  }
+
+  .hero-ring {
+    width: 300px;
+    height: 300px;
+  }
+
+  /* Form */
+  .form-section {
+    padding: 3rem 1.25rem 5rem;
+  }
+
+  .form-field-card {
+    padding: 1.25rem;
+  }
+
+  /* Buttons stacked and full-width */
+  .btn-submit,
+  .btn-reset {
+    width: 100%;
+  }
+
+  /* Results */
+  .results-section {
+    padding: 5rem 1.25rem 4rem;
+  }
+
+  /* Results header stacks vertically */
+  .results-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .results-title {
+    font-size: 1.75rem;
+  }
+
+  /* Cards */
+  .career-card {
+    padding: 1.25rem;
+  }
+
+  .card-title {
+    font-size: 1.25rem;
+  }
+
+  /* Meta row stacks */
+  .card-meta-row {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+}
