@@ -12,13 +12,6 @@ import {
 // the profile object to the parent (App.js) via the onSubmit prop.
 // The reset button wipes all state back to initial values.
 
-const INITIAL_STATE = {
-    educationLevel: "",
-    interests: [],
-    skills: [],
-    preferredIndustry: "",
-};
-
 export default function ProfileForm({ onSubmit, isLoading }) {
     const [educationLevel, setEducationLevel] = useState("");
     const [interests, setInterests] = useState([]);
