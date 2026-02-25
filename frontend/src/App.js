@@ -13,7 +13,7 @@ import CareerCard from "./components/CareerCard";
 // No React Router: view is a single state string. All API calls live here
 // so components stay pure and reusable.
 
-const API_URL = "http://localhost:4000/api/recommend";
+const API_URL = "https://career-recommendation-engine.onrender.com/api/recommend";
 
 export default function App() {
     const [view, setView] = useState("form");
